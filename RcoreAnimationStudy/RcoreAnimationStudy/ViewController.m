@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *layerView;
 
 @end
 
@@ -16,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage * image = [UIImage imageNamed:@"testImg"];
+    self.layerView.layer.contents  = (__bridge id)([image CGImage]) ;
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
