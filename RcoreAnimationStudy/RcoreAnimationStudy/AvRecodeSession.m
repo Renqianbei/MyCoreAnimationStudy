@@ -241,6 +241,64 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
     }
 }
 
+/**
+ *  设置闪光灯模式
+ *
+ *  @param flashMode 闪光灯模式
+ */
+-(void)setFlashMode:(AVCaptureFlashMode )flashMode{
+    [self changeDeviceProperty:^(AVCaptureDevice *captureDevice) {
+        if ([captureDevice isFlashModeSupported:flashMode]) {
+            [captureDevice setFlashMode:flashMode];
+        }
+    }];
+}
+/**
+ *  设置聚焦模式
+ *
+ *  @param focusMode 聚焦模式
+ */
+-(void)setFocusMode:(AVCaptureFocusMode )focusMode{
+    [self changeDeviceProperty:^(AVCaptureDevice *captureDevice) {
+        if ([captureDevice isFocusModeSupported:focusMode]) {
+            [captureDevice setFocusMode:focusMode];
+        }
+    }];
+}
+/**
+ *  设置曝光模式
+ *
+ *  @param exposureMode 曝光模式
+ */
+-(void)setExposureMode:(AVCaptureExposureMode)exposureMode{
+    [self changeDeviceProperty:^(AVCaptureDevice *captureDevice) {
+        if ([captureDevice isExposureModeSupported:exposureMode]) {
+            [captureDevice setExposureMode:exposureMode];
+        }
+    }];
+}
+/**
+ *  设置聚焦点
+ *
+ *  @param point 聚焦点
+ */
+-(void)focusWithMode:(AVCaptureFocusMode)focusMode exposureMode:(AVCaptureExposureMode)exposureMode atPoint:(CGPoint)point{
+    [self changeDeviceProperty:^(AVCaptureDevice *captureDevice) {
+        if ([captureDevice isFocusModeSupported:focusMode]) {
+            [captureDevice setFocusMode:AVCaptureFocusModeAutoFocus];
+        }
+        if ([captureDevice isFocusPointOfInterestSupported]) {
+            [captureDevice setFocusPointOfInterest:point];
+        }
+        if ([captureDevice isExposureModeSupported:exposureMode]) {
+            [captureDevice setExposureMode:AVCaptureExposureModeAutoExpose];
+        }
+        if ([captureDevice isExposurePointOfInterestSupported]) {
+            [captureDevice setExposurePointOfInterest:point];
+        }
+    }];
+}
+
 
 #pragma mark - 通知
 /**
