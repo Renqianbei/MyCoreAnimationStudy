@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC229C4D1B0ADD89006FC07E /* RPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC229C4C1B0ADD89006FC07E /* RPlayerController.m */; };
+		BC229C501B0B1706006FC07E /* RenImagePickerRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = BC229C4F1B0B1706006FC07E /* RenImagePickerRecord.m */; };
+		BC229C531B0B2F9D006FC07E /* RenAvRecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = BC229C521B0B2F9D006FC07E /* RenAvRecoder.m */; };
+		BC229C561B0B37DA006FC07E /* AvRecodeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BC229C551B0B37DA006FC07E /* AvRecodeSession.m */; };
 		BC8FAFAF1B09CA900047A8A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8FAFAE1B09CA900047A8A5 /* main.m */; };
 		BC8FAFB21B09CA900047A8A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8FAFB11B09CA900047A8A5 /* AppDelegate.m */; };
 		BC8FAFB51B09CA900047A8A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8FAFB41B09CA900047A8A5 /* ViewController.m */; };
@@ -27,6 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC229C4B1B0ADD89006FC07E /* RPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPlayerController.h; sourceTree = "<group>"; };
+		BC229C4C1B0ADD89006FC07E /* RPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPlayerController.m; sourceTree = "<group>"; };
+		BC229C4E1B0B1706006FC07E /* RenImagePickerRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenImagePickerRecord.h; sourceTree = "<group>"; };
+		BC229C4F1B0B1706006FC07E /* RenImagePickerRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenImagePickerRecord.m; sourceTree = "<group>"; };
+		BC229C511B0B2F9D006FC07E /* RenAvRecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenAvRecoder.h; sourceTree = "<group>"; };
+		BC229C521B0B2F9D006FC07E /* RenAvRecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenAvRecoder.m; sourceTree = "<group>"; };
+		BC229C541B0B37DA006FC07E /* AvRecodeSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvRecodeSession.h; sourceTree = "<group>"; };
+		BC229C551B0B37DA006FC07E /* AvRecodeSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvRecodeSession.m; sourceTree = "<group>"; };
 		BC8FAFA91B09CA900047A8A5 /* RcoreAnimationStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RcoreAnimationStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8FAFAD1B09CA900047A8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC8FAFAE1B09CA900047A8A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC229C4A1B0ADD56006FC07E /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				BC229C4B1B0ADD89006FC07E /* RPlayerController.h */,
+				BC229C4C1B0ADD89006FC07E /* RPlayerController.m */,
+				BC229C4E1B0B1706006FC07E /* RenImagePickerRecord.h */,
+				BC229C4F1B0B1706006FC07E /* RenImagePickerRecord.m */,
+				BC229C511B0B2F9D006FC07E /* RenAvRecoder.h */,
+				BC229C521B0B2F9D006FC07E /* RenAvRecoder.m */,
+				BC229C541B0B37DA006FC07E /* AvRecodeSession.h */,
+				BC229C551B0B37DA006FC07E /* AvRecodeSession.m */,
+			);
+			name = AVPlayer;
+			sourceTree = "<group>";
+		};
 		BC8FAFA01B09CA900047A8A5 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +108,7 @@
 		BC8FAFAB1B09CA900047A8A5 /* RcoreAnimationStudy */ = {
 			isa = PBXGroup;
 			children = (
+				BC229C4A1B0ADD56006FC07E /* AVPlayer */,
 				BC8FAFB01B09CA900047A8A5 /* AppDelegate.h */,
 				BC8FAFB11B09CA900047A8A5 /* AppDelegate.m */,
 				BC8FAFB31B09CA900047A8A5 /* ViewController.h */,
@@ -220,6 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8FAFB51B09CA900047A8A5 /* ViewController.m in Sources */,
+				BC229C561B0B37DA006FC07E /* AvRecodeSession.m in Sources */,
+				BC229C501B0B1706006FC07E /* RenImagePickerRecord.m in Sources */,
+				BC229C4D1B0ADD89006FC07E /* RPlayerController.m in Sources */,
+				BC229C531B0B2F9D006FC07E /* RenAvRecoder.m in Sources */,
 				BC8FAFB21B09CA900047A8A5 /* AppDelegate.m in Sources */,
 				BC8FAFAF1B09CA900047A8A5 /* main.m in Sources */,
 			);
@@ -344,6 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RcoreAnimationStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RcoreAnimationStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +446,7 @@
 				BC8FAFCE1B09CA900047A8A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC8FAFCF1B09CA900047A8A5 /* Build configuration list for PBXNativeTarget "RcoreAnimationStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +455,7 @@
 				BC8FAFD11B09CA900047A8A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

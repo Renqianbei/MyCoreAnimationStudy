@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>421E0D38-7FBD-4A02-9EE8-08482D434DE6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RcoreAnimationStudy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>41E97D8B82CC7E382EF7A21B7D397FA21C30624E</key>
+		<string>https://github.com/Renqianbei/MyCoreAnimationStudy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RcoreAnimationStudy/RcoreAnimationStudy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>41E97D8B82CC7E382EF7A21B7D397FA21C30624E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Renqianbei/MyCoreAnimationStudy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>41E97D8B82CC7E382EF7A21B7D397FA21C30624E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>41E97D8B82CC7E382EF7A21B7D397FA21C30624E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyCoreAnimationStudy</string>
+		</dict>
+	</array>
+</dict>
+</plist>
