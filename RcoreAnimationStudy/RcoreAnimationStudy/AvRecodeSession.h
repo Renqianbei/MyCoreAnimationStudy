@@ -42,7 +42,7 @@
 -(void)stopRecord;
 
 /**
-  切换摄像头
+  切换摄像头 默认是后置摄像头
  */
--(void)changeAVCaptureDevicePosition:(AVCaptureDevicePosition)cameraPosition;
+-(void)changeAVCaptureDevicePosition;
 @end

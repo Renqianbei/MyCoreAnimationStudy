@@ -173,16 +173,32 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 
 }
 
+//切换摄像头
+-(void)changeAVCaptureDevicePosition{
+    
+    AVCaptureDevice *currentDevice=[self.captureDeviceInput device];
+    AVCaptureDevicePosition currentPosition=[currentDevice position];
+    [self removeNotificationFromCaptureDevice:currentDevice];
+    AVCaptureDevicePosition toChangePosition=AVCaptureDevicePositionFront;
+    if (currentPosition==AVCaptureDevicePositionUnspecified||currentPosition==AVCaptureDevicePositionFront) {
+        toChangePosition=AVCaptureDevicePositionBack;
+    }
+    
+    [self changeAVCaptureDevicePosition:toChangePosition];
+}
+
 #pragma mark 切换前后摄像头
+
+
 
 -(void)changeAVCaptureDevicePosition:(AVCaptureDevicePosition)cameraPosition{
     
-    AVCaptureDevicePosition currentPosition=[[self.captureDeviceInput device] position];
-    if (currentPosition == cameraPosition) {
-        return;
-    }
     
     AVCaptureDevice * toChangeDevice=[self getCameraDeviceWithPosition:cameraPosition];
+    
+    
+    
+    
     [self addNotificationToCaptureDevice:toChangeDevice];
     //获得要调整的设备输入对象
     AVCaptureDeviceInput *toChangeDeviceInput=[[AVCaptureDeviceInput alloc]initWithDevice:toChangeDevice error:nil];
@@ -280,21 +296,25 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 /**
  *  设置聚焦点
  *
- *  @param point 聚焦点
+ *  @param point 在captureVideoPreviewLayer上的点位置
  */
 -(void)focusWithMode:(AVCaptureFocusMode)focusMode exposureMode:(AVCaptureExposureMode)exposureMode atPoint:(CGPoint)point{
+    
+    //转换成聚焦点
+    CGPoint cameraPoint= [self.captureVideoPreviewLayer captureDevicePointOfInterestForPoint:point];
+    
     [self changeDeviceProperty:^(AVCaptureDevice *captureDevice) {
         if ([captureDevice isFocusModeSupported:focusMode]) {
             [captureDevice setFocusMode:AVCaptureFocusModeAutoFocus];
         }
         if ([captureDevice isFocusPointOfInterestSupported]) {
-            [captureDevice setFocusPointOfInterest:point];
+            [captureDevice setFocusPointOfInterest:cameraPoint];
         }
         if ([captureDevice isExposureModeSupported:exposureMode]) {
             [captureDevice setExposureMode:AVCaptureExposureModeAutoExpose];
         }
         if ([captureDevice isExposurePointOfInterestSupported]) {
-            [captureDevice setExposurePointOfInterest:point];
+            [captureDevice setExposurePointOfInterest:cameraPoint];
         }
     }];
 }
